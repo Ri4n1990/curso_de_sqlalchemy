@@ -22,6 +22,7 @@ class Cliente(Base):
     s_urs_cli: Mapped[str] = MappedColumn(String(20))
     senha: Mapped[str] = MappedColumn(String(20))
 
+
     def __repr__(self):
         return  f'id: {self.id} nome: {self.nome} CPF: {self.cpf}'
 
