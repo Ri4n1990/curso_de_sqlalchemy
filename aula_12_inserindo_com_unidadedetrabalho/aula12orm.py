@@ -40,6 +40,10 @@ class Tipocliente(Base):
     i_tipo_cliente_tipo_cliente : Mapped[int] = MappedColumn(primary_key = True)
     s_dsctipocliente_tipocliente : Mapped[str] = MappedColumn(String(100), nullable = False)
 
+
+
+
+
 stmt = (select(Cliente.s_nome_cliente,Tipocliente.s_dsctipocliente_tipocliente)
         .select_from(Cliente)
         .join(Tipocliente, Cliente.i_tipo_cliente == Tipocliente.i_tipo_cliente_tipo_cliente))
